@@ -4,7 +4,10 @@ import cat.itacademy.barcelonactiva.cognoms.nom.s04.t02.n02.S04T02N02GognomsNom.
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
+
 @Repository
 public interface FruitRepository extends JpaRepository<Fruit, Integer> {
 
+    Optional<Object> findByName(String name);
 }
